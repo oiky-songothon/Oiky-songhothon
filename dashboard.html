@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ঐক্য - Dashboard</title>
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#0d6efd">
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+<div class="welcome">
+
+<h2>ঐক্য</h2>
+
+<p id="memberName">স্বাগতম...</p>
+
+</div>
+
+<div class="profile-icon">
+
+<img
+id="profileImage"
+src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
+
+</div>
+
+</header>
+
+<div class="stats-grid">
+
+<div class="stat-card">
+
+<h3 id="dueMembers">0</h3>
+
+<p>বকেয়া সদস্য</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3 id="totalMembers">0</h3>
+
+<p>মোট সদস্য</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3 id="totalCollection">৳ 0</h3>
+
+<p>মোট সংগ্রহ</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3 id="currentMonthCollection">৳ 0</h3>
+
+<p>চলতি মাস</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3 id="totalAdmins">0</h3>
+
+<p>এডমিন</p>
+
+</div>
+
+</div>
+
+<div class="dashboard">
+
+<div class="menu-card" onclick="location.href='members.html'">
+
+<div class="icon">👥</div>
+
+<h3>সদস্য</h3>
+
+<p>সকল সদস্য দেখুন</p>
+
+</div>
+
+<div class="menu-card" onclick="location.href='yearly-report.html'">
+
+<div class="icon">💰</div>
+
+<h3>হিসাব</h3>
+
+<p>মাসিক ও বাৎসরিক</p>
+
+</div>
+
+<div class="menu-card" onclick="location.href='monthly-report.html'">
+
+<div class="icon">📄</div>
+
+<h3>PDF</h3>
+
+<p>রিপোর্ট ডাউনলোড</p>
+
+</div>
+
+<div class="menu-card" onclick="alert('পরবর্তী পর্বে আসছে')">
+
+<div class="icon">📢</div>
+
+<h3>নোটিশ</h3>
+
+<p>সংগঠনের ঘোষণা</p>
+
+</div>
+
+</div>
+
+<nav class="bottom-nav">
+
+<button onclick="location.href='dashboard.html'">
+
+🏠<br>হোম
+
+</button>
+
+<button onclick="location.href='members.html'">
+
+👥<br>সদস্য
+
+</button>
+
+<button onclick="location.href='profile.html'">
+
+👤<br>প্রোফাইল
+
+</button>
+<button id="installBtn" style="display:none;">
+
+📲<br>
+
+ইন্সটল
+
+</button>
+<button id="logoutBtn">
+
+🚪<br>লগআউট
+
+</button>
+
+</nav>
+
+<script type="module" src="js/dashboard.js"></script>
+<script type="module" src="js/install.js"></script>
+<script>
+
+if ("serviceWorker" in navigator) {
+
+window.addEventListener("load", () => {
+
+navigator.serviceWorker.register("./sw.js")
+
+.then(() => {
+
+console.log("Service Worker Registered");
+
+})
+
+.catch((err) => {
+
+console.log("Service Worker Error:", err);
+
+});
+
+});
+
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ঐক্য</title>
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#0d6efd">
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="splash">
+
+<div class="splash-container">
+
+<div class="logo-circle">
+🤝
+</div>
+
+<h1>ঐক্য</h1>
+
+<p>গ্রামের উন্নয়নের সংগঠন</p>
+
+<div class="loader"></div>
+
+</div>
+
+<script>
+
+setTimeout(function(){
+
+location.href="signin.html";
+
+},3000);
+
+</script>
+
+<script>
+
+if ("serviceWorker" in navigator) {
+
+    window.addEventListener("load", () => {
+
+        navigator.serviceWorker.register("./sw.js")
+
+        .then(() => {
+
+            console.log("Service Worker Registered");
+
+        })
+
+        .catch((err) => {
+
+            console.log("Service Worker Error:", err);
+
+        });
+
+    });
+
+}
+
+</script>
+
+</body>
+
+</html>

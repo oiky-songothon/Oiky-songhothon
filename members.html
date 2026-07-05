@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ঐক্য - সদস্য</title>
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#0d6efd">
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+<div>
+
+<h2>সদস্য তালিকা</h2>
+
+<p>ঐক্য সংগঠন</p>
+
+</div>
+
+<button class="back-btn" onclick="location.href='dashboard.html'">
+
+←
+
+</button>
+
+</header>
+
+<div class="container" style="margin-top:20px;">
+
+<div class="card">
+
+<input
+type="text"
+id="searchBox"
+placeholder="সদস্য খুঁজুন..."
+class="search-input">
+
+</div>
+
+<div id="memberList">
+
+<!-- Firebase থেকে সদস্যদের তালিকা এখানে আসবে -->
+
+</div>
+
+</div>
+
+<script type="module" src="js/members.js"></script>
+
+<script>
+
+if ("serviceWorker" in navigator) {
+
+window.addEventListener("load", () => {
+
+navigator.serviceWorker.register("./sw.js")
+
+.then(() => {
+
+console.log("Service Worker Registered");
+
+})
+
+.catch((err) => {
+
+console.log("Service Worker Error:", err);
+
+});
+
+});
+
+}
+
+</script>
+
+</body>
+
+</html>
