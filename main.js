@@ -127,8 +127,6 @@ localStorage.setItem("uid",userCredential.user.uid);
 
 const docSnap=await getDoc(doc(db,"users",userCredential.user.uid));
 
-const docSnap = await getDoc(
-    doc(db, "users", userCredential.user.uid)
 );
 
 if (!docSnap.exists()) {
