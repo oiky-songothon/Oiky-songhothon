@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>সদস্যের হিসাব</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+<div>
+
+<h2>সদস্যের হিসাব</h2>
+
+<p>Admin Panel</p>
+
+</div>
+
+<button class="back-btn" onclick="history.back()">
+←
+</button>
+
+</header>
+
+<div class="container" style="margin-top:20px;">
+
+<div class="card">
+
+<h3 id="memberName">লোড হচ্ছে...</h3>
+
+<p id="memberHouse"></p>
+
+<p id="memberPhone"></p>
+
+</div>
+
+<div class="card" style="margin-top:20px;">
+
+<h3>নতুন চাঁদা যোগ করুন</h3>
+
+<div class="input-group">
+
+<label>মাস</label>
+
+<select id="month">
+
+<option>জানুয়ারি</option>
+<option>ফেব্রুয়ারি</option>
+<option>মার্চ</option>
+<option>এপ্রিল</option>
+<option>মে</option>
+<option>জুন</option>
+<option>জুলাই</option>
+<option>আগস্ট</option>
+<option>সেপ্টেম্বর</option>
+<option>অক্টোবর</option>
+<option>নভেম্বর</option>
+<option>ডিসেম্বর</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>বছর</label>
+
+<input type="number"
+id="year"
+value="2026">
+
+</div>
+
+<div class="input-group">
+
+<label>টাকার পরিমাণ</label>
+
+<input
+type="number"
+id="amount"
+placeholder="যেমন: 500">
+
+</div>
+
+<div class="input-group">
+
+<label>তারিখ</label>
+
+<input
+type="date"
+id="date">
+
+</div>
+
+<div class="input-group">
+
+<label>নোট</label>
+
+<input
+type="text"
+id="note"
+placeholder="প্রয়োজন হলে লিখুন">
+
+</div>
+
+<button class="btn" id="savePayment">
+
+চাঁদা সংরক্ষণ করুন
+
+</button>
+
+</div>
+
+<div class="card" style="margin-top:20px;">
+
+<h3>আগের হিসাব</h3>
+
+<div id="paymentHistory">
+
+লোড হচ্ছে...
+
+</div>
+
+</div>
+
+</div>
+
+<script type="module" src="js/admin-member.js"></script>
+
+</body>
+
+</html>
